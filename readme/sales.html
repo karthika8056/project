@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Entry Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: grey;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sales Entry Form</h2>
+        <form action="submit_sales.php" method="POST">
+            <label for="date">Date:</label>
+            <input type="date" name="date" required>
+            <br><br>
+
+            <label for="customer">Customer:</label>
+            <input type="text" name="customer" required>
+
+            <label for="product">Product:</label>
+            <input type="text" name="product" required>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" name="quantity" min="1" required>
+
+            <label for="price">Price:</label>
+            <input type="text" name="price" required>
+
+            <label for="total_amount">Total Amount:</label>
+            <input type="text" name="total_amount" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
